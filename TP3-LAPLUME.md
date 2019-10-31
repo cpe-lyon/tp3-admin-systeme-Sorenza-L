@@ -77,8 +77,13 @@ La commande ***'['*** est un synonyme de la commande  test en comparant une vale
 
 ### Installez le paquet emacs à l’aide de la version graphique d’aptitude.
 
+Pour installer aptitude dans une premier temps j'utilise :
+>sudo apt-get install aptitude
+Puis pour intaller emacs à l'aide de la version graphique d'aptitude il suffit de taper ***"+"*** saisir emacs puis une succession de ***"g"*** pour l'installation.
+
 ## Exercice 6. Installation d’un paquet par PPA
-# Certains logiciels ne figurent pas dans les dépôts officiels. C’est le cas par exemple de la version ”officielle” de Java depuis qu’elle est développée par Oracle. Dans ces cas, on peut parfois se tourner vers un ”dépôt personnel” ou PPA.
+
+Certains logiciels ne figurent pas dans les dépôts officiels. C’est le cas par exemple de la version ”officielle” de Java depuis qu’elle est développée par Oracle. Dans ces cas, on peut parfois se tourner vers un ”dépôt personnel” ou PPA.
 
 ### 1. Installer la version Oracle de Java (avec l’ajout des PPA)
 sudo add-apt-repository ppa:linuxuprising/java
@@ -88,3 +93,11 @@ sudo apt install oracle-java12-installer
 ### 2. Vérifiez qu’un nouveau fichier a été créé dans /etc/apt/sources.list.d. Que contient-il ?
 
 Le nouveau fichier qui a été créé dans etc/apt/sources.list.d. contient le ***deb http://ppa.launchpad.net/linuxuprising/java/ubuntu disco main ***
+
+## Exercice 7. Création de dépôt personnalisé
+
+Dans cet exercice, vous allez créer vos propres paquets et dépôts, ce qui vous permettra de gérer les programmes que vous écrivez comme s’ils provenaient de dépôts officiels. Création d’un paquet Debian avec dpkg-deb
+
+### 1. Dans le dossier scripts créé lors du TP 2, créez un sous-dossier origine-commande où vous créerez un sous-dossier DEBIAN, ainsi que l’arborescence usr/local/bin où vous placerez le script écrit à l’exercice 2
+
+### 2. Dans le dossier DEBIAN, créez un fichier control avec les champs suivants :
